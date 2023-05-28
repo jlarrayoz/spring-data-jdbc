@@ -3,9 +3,12 @@ package edu.curso.models;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.repository.CrudRepository;
+
+
 import edu.curso.domain.Ingrediente;
 
-public interface IngredienteRepository {
+public interface IngredienteRepository extends CrudRepository<Ingrediente, String>{
 
 	//Metodo encargado de devolver todos los elementos del modelo
 	List<Ingrediente> findAll();

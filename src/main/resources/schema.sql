@@ -1,4 +1,4 @@
-create table if not exists OrdenPizza (
+create table if not exists Orden_Pizza (
   id identity,
   nombrePersona varchar(50) not null,
   ciudad varchar(50) not null,
@@ -12,7 +12,8 @@ create table if not exists OrdenPizza (
 create table if not exists Pizza (
   id identity,
   nombre varchar(50) not null,
-  fk_ordenPizza_id bigint not null
+  orden_pizza bigint not null,
+  orden_pizza_key bigint not null
 );
 
 
@@ -23,13 +24,13 @@ create table if not exists Ingrediente (
 );
 
 
-
 create table if not exists Ingrediente_Pizza (
-  fk_ingrediente_id varchar(4) not null,
-  fk_pizza_id bigint not null
+  ingrediente varchar(4) not null,
+  pizza bigint not null,
+  pizza_key bigint not null
 );
 
 
 ALTER TABLE Ingrediente ADD PRIMARY KEY (id);
-alter table Pizza add foreign key (fk_ordenPizza_id) references OrdenPizza(id);
-alter table Ingrediente_Pizza add foreign key (fk_ingrediente_id) references Ingrediente(id);
+alter table Pizza add foreign key (orden_pizza) references Orden_Pizza(id);
+alter table Ingrediente_Pizza add foreign key (ingrediente) references Ingrediente(id);

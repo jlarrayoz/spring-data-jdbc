@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import edu.curso.domain.OrdenPizza;
-import edu.curso.models.jdbc.OrdenPizzaJdbcRepository;
+import edu.curso.models.OrdenPizzaRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,9 +19,9 @@ import lombok.extern.slf4j.Slf4j;
 @SessionAttributes("ordenPizza")
 public class OrdenPizzaController {
 	
-	private OrdenPizzaJdbcRepository ordenPizzaRepo;
+	private OrdenPizzaRepository ordenPizzaRepo;
 	
-	public OrdenPizzaController(OrdenPizzaJdbcRepository ordenPizzaRepo) {
+	public OrdenPizzaController(OrdenPizzaRepository ordenPizzaRepo) {
 		super();
 		this.ordenPizzaRepo = ordenPizzaRepo;
 	}

@@ -16,7 +16,7 @@ import edu.curso.domain.Ingrediente;
 import edu.curso.domain.OrdenPizza;
 import edu.curso.domain.Pizza;
 import edu.curso.domain.TipoIngrediente;
-import edu.curso.models.jdbc.IngredienteJdbcRepository;
+import edu.curso.models.IngredienteRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,10 +27,10 @@ import lombok.extern.slf4j.Slf4j;
 @SessionAttributes("ordenPizza") //Pone el atributo ordenPizza que se define en el modelo más abajo en la session
 public class DiseniarPizzaController {
 	
-	private IngredienteJdbcRepository ingredienteRepo;
+	private IngredienteRepository ingredienteRepo;
 	
 	
-	public DiseniarPizzaController(IngredienteJdbcRepository ingredienteRepo) {
+	public DiseniarPizzaController(IngredienteRepository ingredienteRepo) {
 		super();
 		this.ingredienteRepo = ingredienteRepo;
 	}
