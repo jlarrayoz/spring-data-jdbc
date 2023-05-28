@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>ort.cursos</groupId>
-	<artifactId>spring-jpa</artifactId>
+	<artifactId>spring-data-jdbc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>curso-spring-jpa</name>
+	<name>curso-spring-data-jpa</name>
 	<description>Projecto ejemplo para curso de spring</description>
 
 	<properties>
